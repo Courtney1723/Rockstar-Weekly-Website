@@ -4,9 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=100%, initial-scale=1.0, shrink-to-fit=yes">
+		<link rel="shortcut icon" type="image/png" href="https://imgur.com/y7JiOlp.png">
+		<link rel="apple-touch-icon" href="https://imgur.com/y7JiOlp.png">
     <title>Rockstar Weekly</title>
     <meta name="description" content="Get the latest Red Dead Redemption II or Grand Theft Auto V weekly bonuses">
-    <meta name="theme-color" content="#f54254">
+    <meta name="theme-color" content="#36393E">
     <link rel="icon" type="image/png" sizes="300x250" href="assets/img/superthumb.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
@@ -17,10 +19,10 @@
 </head>
 
 <body style="background-color: var(--background);">
-    <div id="top" style="height: 125px;">
+    <div id="top" style="height: 150px;">
         <nav class="navbar navbar-light navbar-expand fixed-top" style="color: var(--main-color);border-top-width: 6px;border-top-style: solid;background: var(--background);">
             <div class="container-fluid">
-							<a class="navbar-brand" href="#" style="color: var(--main-color);font-family: 'Alfa Slab One', cursive; height: 50px; width: 100%; text-align: center;font-size: 2.5em;">Rockstar Weekly</a>
+							<a class="navbar-brand" href="index.html#" style="color: var(--main-color);font-family: 'Alfa Slab One', cursive; height: 50px; width: 100%; text-align: center;font-size: 2.5em;">Rockstar Weekly</a>
     </div>	
 					 </nav>
 		</div>
@@ -52,25 +54,77 @@
                         <p class="description" style="color: var(--secondary-text-color);">View the Frequently Asked Questions.<br></p>
                     </div>
                 </a>
+                <a class="col-sm-6 col-md-5 col-lg-4 item" href="./privacyPolicy.html"> 
+                    <div id="features" class="box"><i class="fa fa-lock icon" style="color: var(--main-color);"></i>
+                        <h3 class="name" style="width: 98%; word-wrap: break-word;">Privacy</h3>
+                        <p class="description" style="color: var(--secondary-text-color);">View the Privacy Policy.<br></p>
+                    </div>
+                </a>	
+                <a class="col-sm-6 col-md-5 col-lg-4 item" href="./termsOfService.html"> 
+                    <div id="features" class="box"><i class="fa fa-gavel icon" style="color: var(--main-color);"></i>
+                        <h3 class="name" style="width: 98%; word-wrap: break-word;">Terms</h3>
+                        <p class="description" style="color: var(--secondary-text-color);">View the Terms of Service.<br></p>
+                    </div>
+                </a>							
             </div>
         </div>
         <div></div>
     </div>  
-	<div style="background-color: var(--background);"><div style="height: 10%; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 90%; width: 100%;"><path d="M-41.53,-9.56 C167.83,173.98 302.14,-60.89 534.09,89.10 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: var(--secondary);"></path></svg></div></div>
+    <div style="background-color: var(--background);"><div style="height: 10em; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 10em; width: 100%;"><path d="M-41.53,-9.56 C167.83,173.98 302.14,-60.89 534.09,89.10 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: var(--secondary);"></path></svg></div></div>
     <div id="commands">
-			<h1 style="text-align: center;color: var(--secondary-text-color);">Commands</h1>  
         <section>
             <div class="container-fluid text-white">
-
+							<h2 class="text-center" style="color: var(--text-color);">Commands</h2>
             </div>
         </section><div class="container">
-        <p style="color: var(--secondary-text-color);font-size: 2em;">
-					<br>• /help - View all bot comands 
-					<br><br>• /gta - Get the latest Grand Theft Auto V online bonuses	& discounts				
-					<br><br>• /rdo - Get the latest Red Dead Redemption II online bonuses & discounts
-					<br><br>• /autopost - Start, Stop, Configure or Confirm auto post settings.
-					<br><br>• /ping - The bot will respond with 'Pong!' when online.
+  <div class="accordion">
+    <! --- Autopost Start -- >
+          <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">/Autopost</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>• Start, Stop, Configure, Confirm, and test auto post settings.
 				</p>
+      </div>
+    </div>
+    <! --- Autopost End -- >
+    <! --- GTA Start -- >
+          <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">/GTA</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>• Get the latest Grand Theft Auto V online bonuses	& discounts	
+				</p>
+      </div>
+    </div>
+    <! --- GTA End -- >
+    <! --- Help Start -- >
+          <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">/Help</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>• View all bot comands and useful links
+				</p>
+      </div>
+    </div>
+    <! --- Help End -- >
+    <! --- Ping Start -- >
+          <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">/Ping</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>• The bot will respond with 'Pong!' when online.
+				</p>
+      </div>
+    </div>
+    <! --- Ping End -- >		
+    <! --- RDO Start -- >
+          <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">/RDO</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>• Get the latest Red Dead Redemption II online bonuses & discounts
+				</p>
+      </div>
+    </div>
+    <! --- RDO End -- >			
+		
+  </div>
 </div></div>
 
 
@@ -81,9 +135,10 @@
                 <div class="col item social"><a class="smoothScroll" href="#top"><i class="icon ion-android-arrow-up"></i></a></div>
             </div>
             <p class="copyright" style="color: var(--text-color);">Rockstar Weekly Bot © 2022</p>
-            <p class="copyright" style="color: var(--text-color);padding: 0px;"><a href="./privacyPolicy.html">Privacy</a></p>			
-						<p class="copyright" style="color: var(--text-color);padding: 0px;"><a href="./faq.html">FAQ</a></p>
-						<p class="copyright" style="color: var(--text-color);padding: 0px;"><a href="./index.html">Home</a></p>
+						<p class="copyright" style="color: var(--text-color);padding: 0px;"><a href="./index.html#">Home</a></p>
+						<p class="copyright" style="color: var(--text-color);padding: 0px;"><a href="./faq.html">FAQ</a></p>					
+            <p class="copyright" style="color: var(--text-color);padding: 0px;"><a href="./privacyPolicy.html">Privacy Policy</a></p>	
+						<p class="copyright" style="color: var(--text-color);padding: 0px;"><a href="./termsOfService.html">Terms of Service</a></p>
             <p class="copyright" style="color: var(--text-color);padding: 0px;">
                 Created by&nbsp;<a href="https://discordapp.com/users/764323742959534101" style="color: var(--main-color);">Courtney1723#1521</a></p>
         </div>
