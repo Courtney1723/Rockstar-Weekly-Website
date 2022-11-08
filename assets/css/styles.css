@@ -23,11 +23,11 @@
 }
 
 .footer-dark {
-  padding: 1em 0;
+  padding: 2em 0;
 }
 
 .footer-dark .item.text {
-  margin-bottom: 1em;
+  margin-bottom: em;
 }
 
 .footer-dark .item.social {
@@ -54,7 +54,6 @@
 
 .footer-dark .copyright {
   text-align: center;	
-  padding-top: 24px;
 }
 
 /* features */
@@ -155,16 +154,20 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 4rem;
+  padding-right: 2rem;
+	padding-left: 2rem;
   color: var(--secondary-text-color);
+	z-index: 102;
 }
 
 .accordion .accordion-item {
   border-bottom: 1px solid var(--text-color);
+	z-index: 0;
 }
 
 .accordion .accordion-item button[aria-expanded='true'] {
   border-bottom: 1px solid var(--link);
+	z-index: 0;
 }
 
 .accordion button {
@@ -179,6 +182,7 @@ a {
   border: none;
   background: none;
   outline: none;
+	z-index: 0;
 }
 
 .accordion button:hover, .accordion button:focus {
@@ -190,6 +194,7 @@ a {
   cursor: pointer;
   color: var(--link);
   border-right: 1px solid var(--link);
+	
 }
 
 .accordion button .accordion-title {
@@ -233,6 +238,7 @@ a {
 
 .accordion button[aria-expanded='true'] .icon::after {
   width: 0;
+	z-index: -1;
 }
 
 .accordion button[aria-expanded='true'] + .accordion-content {
@@ -282,5 +288,21 @@ div#features:hover {
 .yeet {
   text-align: center;
   padding: 18px;
+}
+
+.pageHeader {
+	z-index: 100;
+	background-color: var(--background);
+}
+
+.pageTitle {
+	z-index: 101;
+	background-color: var(--background);
+}
+
+.headerSVG {
+	z-index: 100;
+	transform: rotateX(180deg);
+	transform: rotateZ(180deg);
 }
 
