@@ -73,7 +73,7 @@
   color: inherit;
 }
 
-@media (max-width:767px) {
+@media only screen and (max-width:767px) {
   .features-boxed h2 {
     margin-bottom: 2em;
     padding-top: 4em;
@@ -163,6 +163,7 @@ a {
 .accordion .accordion-item {
   border-bottom: 1px solid var(--text-color);
 	z-index: 0;
+	height: fit-content;
 }
 
 .accordion .accordion-item button[aria-expanded='true'] {
@@ -246,6 +247,7 @@ a {
   max-height: 250em;
   transition: all 200ms linear;
   will-change: opacity, max-height;
+	height: fit-content;
 }
 
 .accordion .accordion-content {
@@ -260,6 +262,7 @@ a {
   font-size: 1.5rem;
   font-weight: 300;
   margin: 2em 0;
+	height: fit-content;
 }
 
 div#features {
