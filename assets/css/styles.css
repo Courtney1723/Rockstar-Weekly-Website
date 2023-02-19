@@ -2,7 +2,7 @@
   --main-color: #00ffff;
   --background: #36393E;
   --secondary: #262626;
-  --link: #66b3b5;
+  --link: #64FFFF;
   --text-color: #fff;
 	--text-color2: #000;
   --secondary-text-color: #c1d2e1;
@@ -48,8 +48,8 @@
   opacity: 0.75;
 }
 
-.footer-dark .item.social > a:hover {
-  background-color: #474350;
+.footer-dark a:hover {
+  text-shadow: 1px 1px 1px rgba(251, 251, 0, 0.8);
 }
 
 .footer-dark .copyright {
@@ -73,23 +73,49 @@
   color: inherit;
 }
 
-@media only screen and (max-width:767px) {
-  .features-boxed h2 {
+@media only screen and (max-width:767px) { /*mobile*/
+  .features-boxed .intro {
+    font-size: 30px;
+		color: inherit;
+		overflow: hidden;
+  }	
+
+	.features-boxed .intro h2 {
     margin-bottom: 2em;
-    padding-top: 4em;
+		padding-top: 2vh;
     font-size: 24px;
 		overflow: hidden;
   }
+
+	.container-fluid a {
+		font-size: 2em;
+	}
 }
 
-.features-boxed .intro {
+@media screen and (max-width:400px) { /*small mobile*/
+	.container-fluid a {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (min-width: 767px) { /*desktop*/
+	.features-boxed .intro h2 {
+    margin-bottom: 4vh;
+    padding-top: 4vh;
+    font-size: 38px;
+		overflow: hidden;
+  }	
+
+	.container-fluid a {
+		font-size: 2.5em;
+	}	
+}
+
+.features-boxed .container .intro {
   font-size: 16px;
   max-width: 500px;
   margin: 0 auto;
-}
-
-.features-boxed .intro p {
-  margin-bottom: 0;
+	height: 10vh;
 }
 
 .features-boxed .features {
@@ -131,6 +157,7 @@
 a:hover {
   text-decoration: none;
   color: var(--main-color);
+	transform: scale(1.05);
 }
 
 .shadow-lg.box:hover {
@@ -156,6 +183,7 @@ a {
   margin: 0 auto;
   padding-right: 2rem;
 	padding-left: 2rem;
+	padding-top: 10vh;
   color: var(--secondary-text-color);
 	z-index: 102;
 }
@@ -307,4 +335,17 @@ div#features:hover {
 	z-index: 100;
 	transform: rotateX(180deg);
 	transform: rotateZ(180deg);
+}
+
+.container-fluid a {
+	font-family: 'Alfa Slab One', cursive; 
+	height: 50px; 
+	width: 100vw; 
+	text-align: center; 
+}
+
+.invite_button {
+	width: 92vw;
+	margin-left: 4vw;
+	margin-right: 4vw;
 }
