@@ -350,3 +350,44 @@ div#features:hover {
 	margin-left: 4vw;
 	margin-right: 4vw;
 }
+
+/* Cookies */
+
+.cookie-notice {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--secondary-text-color);
+    padding: 10px;
+    text-align: center;
+		display: none;	
+}
+
+.close-btn {
+    background-color: var(--secondary-text-color);
+    color: var(--secondary);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.close-btn:hover {
+    background-color: var(--text-color);
+}
+
+.deny-btn {
+    background-color: var(--secondary-text-color);
+    color: var(--secondary);
+    border: none;
+		width: 10%;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+.deny-btn:hover {
+    background-color: var(--text-color);
+}

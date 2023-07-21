@@ -38,7 +38,7 @@ function removeExtension() {
 			window.history.pushState(null, null, newNewLink.substring(3, newNewLink.length));
 		}
 	}
-	else if (link.includes("repl.co")) {g
+	else if (link.includes("repl.co")) {
 		var newLink = link.split('repl.co')[1];
 		if (link.includes(".html")) {
 			var newNewLink = newLink.split('.html')[0];
@@ -49,3 +49,46 @@ function removeExtension() {
 removeExtension();
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+//Cookie Banner Close
+function closeCookieNotice() {
+		document.querySelector(".cookie-notice").style.display = "none";
+		localStorage.setItem('cookie_consent', 'agreed');
+}
+
+function preventCookieSet() {
+  const cookies = document.cookie.split(';');
+
+  for (let i = 0; i < cookies.length; i++) {
+    const cookieName = cookies[i].split('=')[0].trim();
+    const pastDate = new Date(0).toUTCString();
+    document.cookie = `${cookieName}=; expires=${pastDate}; path=/; SameSite=Strict; secure;`;
+  }
+}
+
+function checkCookieConsent() {
+	if (localStorage.getItem('cookie_consent') === null) {
+		document.querySelector(".cookie-notice").style.display = "block";
+	}
+}
+checkCookieConsent();
+
+function denyCookies() {
+	localStorage.setItem('cookie_deny', "yes");
+	localStorage.setItem('cookie_consent', "no");
+	document.querySelector(".cookie-notice").style.display = "none";
+  preventCookieSet();
+	window.location = "./privacyPolicy.html";
+}
+
+function checkDeniedCookies() {
+	if (localStorage.getItem('cookie_deny') !== null) {
+	  preventCookieSet();
+		if (document.getElementById("deny-btn") !== null) {
+			document.getElementById("deny-btn").innerHTML = "You have already denied cookie consent";
+		}
+	}	
+}
+checkDeniedCookies();
+
+console.log(`tf: ${document.getElementById("deny-btn")}`)
