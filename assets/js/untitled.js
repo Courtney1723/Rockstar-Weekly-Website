@@ -29,4 +29,23 @@ function toggleAccordion() {
   }
 }
 
+function removeExtension() {
+	var link = new URLSearchParams(window.location.href).toString();
+	if (link.includes(".com")) {
+		var newLink = link.split('.com')[1];
+		if (link.includes(".html")) {
+			var newNewLink = newLink.split('.html')[0];
+			window.history.pushState(null, null, newNewLink.substring(3, newNewLink.length));
+		}
+	}
+	else if (link.includes("repl.co")) {g
+		var newLink = link.split('repl.co')[1];
+		if (link.includes(".html")) {
+			var newNewLink = newLink.split('.html')[0];
+			window.history.pushState(null, null, newNewLink.substring(3, newNewLink.length));
+		}
+	}	
+}
+removeExtension();
+
 items.forEach(item => item.addEventListener('click', toggleAccordion));
